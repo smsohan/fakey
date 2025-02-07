@@ -1,0 +1,9 @@
+steps:
+- name: "gcr.io/cloud-builders/docker"
+  args:
+  - build
+  - "--tag=us-central1-docker.pkg.dev/sohansm-project/cloud-run-source-deploy/deepfaker-job"
+  - "--file=./Dockerfile.job"
+  - .
+images:
+- "us-central1-docker.pkg.dev/sohansm-project/cloud-run-source-deploy/deepfaker-job"
